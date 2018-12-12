@@ -1,30 +1,16 @@
 package se.spacejens.samplewebapp;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.web.servlet.MockMvc;
-
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
-@AutoConfigureMockMvc
-public class SamplewebappApplicationTests {
-
-	@Autowired
-	private MockMvc mockMvc;
+class SamplewebappApplicationTests {
 
 	@Test
-	public void contextLoads() throws Exception {
-		mockMvc
-				.perform(get("/helloworld"))
-				.andDo(print())
-				.andExpect(status().isOk())
-				.andExpect(content().string(containsString("Hello World")));
+	void contextLoads() {
+		/*
+		 * The purpose of this test case is to verify that the context loads successfully (i.e. no exception is thrown).
+		 * Therefore, no additional code is needed in this test case.
+		 */
 	}
 }
